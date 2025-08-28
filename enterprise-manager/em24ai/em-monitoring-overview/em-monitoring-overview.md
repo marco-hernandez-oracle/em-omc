@@ -210,7 +210,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 4. In Incident Manager, the “All open incidents” view is displayed by default. 
 
-     Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.467”. Details of the incident will be displayed in the bottom pane.
+     Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.013”. Details of the incident will be displayed in the bottom pane.
 
      **Note**: The Fast Recovery Area (FRA) is a unified storage location for all Oracle Database files related to recovery.  
 
@@ -695,6 +695,79 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
       ![Runbook Sessions](images/start-runbook-metric/runbook-sessions.png " ")
 
 
+## Task 3D: Dynamic Runbooks for Notification Backlog (Universal Context) 
+
+Dynamic Runbooks are documented best practice procedures in the form of executable steps that ITOps teams follow to prevent or resolve an issue. Dynamic Runbooks can be executed inside Enterprise Manager (EM) in context of a metric, incident, or any other EM context (universal context).
+
+A universal context runbook can be used for any functional area in EM.  
+
+As an example of a universal context runbook, you will review the Triage Notification Backlog runbook.
+
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
+
+    ![Enterprise Manager login](ask-em-images/em24-login.png " ")
+
+2. Click the **hamburger menu** icon.
+
+    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
+
+3.	Navigate to **Setup > Manage Enterprise Manager > Health Overview**.
+
+    ![Navigate to Setup](ask-em-images/universal-runbook/setup.png " ")
+
+    ![Navigate to Health Overview](ask-em-images/universal-runbook/health-overview.png " ")
+
+4.	Scroll down to the **Notification Performance** section.
+
+    ![Scroll to Notification Performance](ask-em-images/universal-runbook/notif-performance.png " ")
+
+5. Notice the Oracle provided runbook named **Triage Notification Backlog with Runbook**. This is an example of a universal context runbook.  This runbook helps to triage delayed or missing notifications.
+
+    **Click on the "Triage Notification Backlog with Runbook" link to start a runbook session**. It will open a runbook session in a new tab.
+
+    ![Start new Runbook session](ask-em-images/universal-runbook/universal-runbook.png " ")
+
+6. In this runbook session, notice the universal context description.  This means it does not have a pre-defined context, but it has steps to query and take actions on the appropriate EM components.
+
+    ![Universal Context runbook session started](ask-em-images/universal-runbook/traige-notif-backlog.png " ")
+
+7. **Execute the first 4 steps of the runbook**.  You do not have to execute the remaining steps.
+
+    ![Universal Context Runbook - Overview and Prereqs](ask-em-images/universal-runbook/overview-prereq.png " ")
+
+    ![Universal Context Runbook - Step 1](ask-em-images/universal-runbook/step-2.png " ")
+
+    ![Universal Context Runbook - Step 2](ask-em-images/universal-runbook/step-3.png " ")
+
+    ![Universal Context Runbook - Step 3](ask-em-images/universal-runbook/step-4.png " ")
+
+
+## Task 3E: Access Dynamic Runbook Samples
+
+Runbooks are documented best practice procedures that IT staff follow to prevent or resolve an issue. In Enterprise Manager, you can get started with using Dynamic Runbooks by downloading sample runbooks and installing them to your Enterprise Manager site.
+
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
+
+    ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
+
+2. Click the **hamburger menu** icon.
+
+    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
+
+3. Navigate to "Enterprise >> Monitoring >> Incident Manager".
+
+     ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
+
+4. Notice a yellow box on the top of the page that says "Use Dynamic Runbooks to triage your incidents". Click on the arrow to expand it.
+     ![Dynamic Runbooks Yellow Box](images/sample-runbooks/yellow-box.png " ")
+
+5. In the expanded pane, it explains Dynamic Runbooks allows you to capture procedural knowledge in triaging incidents into steps that can be executed in Enterprise Manager. At the end, there is a link to a MOS note. Click the link to open the MOS note in a new tab.
+     ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/yellow-box-expanded.png " ")
+
+6. In the MOS note, you can see there are three example runbooks available: **FRA (Fast Recovery Area) Runbook**, **Database Tablespace Full Triage Runbook**, and **CPU Utilization Runbook**. Follow the steps in the **Solution** section to download the sample runbooks and install them in your Enterprise Manager site.
+     ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/mos-note.png " ")
+
+
 ## Task 4: Metric and Collection Settings
 
 Metric and Collection Settings page is where we can view and configure thresholds, collection schedules, and Corrective Actions for the metrics being monitored for the target.
@@ -970,7 +1043,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
     ![Enterprise monitoring, monitoring templates page](images/emmonlab6step4.png " ")
 
-6. Select Database Instance target type then select cdb186.subnet.vcn.oraclevcn.com.
+6. Select Database Instance target type then select cdb186.subnet.vcn.oraclevcn.com. Then click the Select button.
 
     ![Enterprise monitoring, monitoring templates page with Search and Select targets pop-up](images/emmonlab6step5.png " ")
 
