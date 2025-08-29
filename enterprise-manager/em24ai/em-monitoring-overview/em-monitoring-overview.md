@@ -1348,7 +1348,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 ## Task 10A: Event Compression Policies
 
-vent Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Before incident creation, Event Compression Policies work with Incident Rule Sets to determine if incoming events should be grouped and compressed into a single incident.
+Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Before incident creation, Event Compression Policies work with Incident Rule Sets to determine if incoming events should be grouped and compressed into a single incident.
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
